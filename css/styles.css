@@ -56,8 +56,8 @@
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-rgb: 33, 37, 41;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-font-sans-serif: "freehouse";
+  --bs-font-monospace: "raleway";
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
@@ -3028,8 +3028,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #64a19d;
-  border-color: #64a19d;
+  background-color: #000;
+  border-color: #000;
 }
 .btn-primary:hover {
   color: #fff;
@@ -4050,7 +4050,8 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #64a19d;
+  font-family: freehouse;
+  color: #fff;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -4103,6 +4104,16 @@ textarea.form-control-lg {
   background: none;
   border: 0;
   border-radius: 0.25rem;
+}
+
+.rectangle {
+  background-color: var(--black);
+  border-radius: 24px;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -4546,10 +4557,10 @@ textarea.form-control-lg {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: #fff;
 }
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: #eadd42;
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.55);
@@ -4638,20 +4649,24 @@ textarea.form-control-lg {
   border-top-width: 0;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
+  background-color: black;
 }
 .card > .list-group:last-child {
   border-bottom-width: 0;
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
+  background-color: black;
 }
 .card > .card-header + .list-group,
 .card > .list-group + .card-footer {
   border-top: 0;
+  background-color: black;
 }
 
 .card-body {
   flex: 1 1 auto;
   padding: 1rem 1rem;
+  background-color: #a72f2f;
 }
 
 .card-title {
@@ -7858,6 +7873,7 @@ textarea.form-control-lg {
 
 .text-uppercase {
   text-transform: uppercase !important;
+  font-family: "freehouse";
 }
 
 .text-capitalize {
@@ -7927,6 +7943,7 @@ textarea.form-control-lg {
 .text-white {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+  font-family: "freehouse";
 }
 
 .text-body {
@@ -7946,7 +7963,53 @@ textarea.form-control-lg {
 
 .text-white-50 {
   --bs-text-opacity: 1;
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: #fff !important;
+  font-family: "raleway";
+}
+
+.text-white-yourmom {
+  --bs-text-opacity: 1;
+  color: #fff !important;
+  font-family: "raleway";
+  text-align: left;
+  margin-left: 10rem;
+  position: relative;
+  left: -20rem; top: 1rem;
+}
+
+.text-white-yourmom2 {
+  --bs-text-opacity: 1;
+  color: #fff !important;
+  font-family: "raleway";
+  text-align: left;
+  margin-left: 18rem;
+  position: relative;
+  bottom: 17rem;
+}
+
+.text-white-yourmom3 {
+  --bs-text-opacity: 1;
+  color: #fff !important;
+  font-family: "raleway";
+  text-align: left;
+  margin-right: auto;
+  position: relative;
+  bottom: 31rem; right: -50rem;
+}
+
+.idea {
+  position: relative;
+  left: -31rem; top: -1rem;
+}
+
+.solid-group {
+  position: relative;
+  top: -20rem;
+}
+
+.code {
+  position: relative;
+  right: -30rem; top: -35rem;
 }
 
 .text-reset {
@@ -11473,6 +11536,7 @@ body {
   outline: none;
 }
 #mainNav .navbar-brand {
+  font-family: "freehouse";
   color: #000;
   font-weight: 700;
   padding: 0.9rem 0;
@@ -11496,15 +11560,15 @@ body {
   }
   #mainNav .navbar-brand {
     padding: 0.5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
   }
   #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: #fff;
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: #eadd42;
   }
   #mainNav .nav-link:active {
     color: #fff;
@@ -11536,7 +11600,7 @@ body {
 .btn {
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "freehouse";
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
@@ -11548,24 +11612,26 @@ body {
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  padding: 15rem 15rem;
+  background: url("../assets/img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
 .masthead h1, .masthead .h1 {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "freehouse";
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  background: #fff;
+  padding-top: 10rem;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
 }
 .masthead h2, .masthead .h2 {
+  font-family: "freehouse";
   max-width: 20rem;
   font-size: 1rem;
 }
@@ -11601,14 +11667,18 @@ body {
 
 .projects-section {
   padding: 10rem 0;
+  background-color: #a72f2f;
 }
 .projects-section .featured-text {
   padding: 2rem;
+  font-family: "freehouse";
+  color: #fff;
 }
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
     border-left: 0.5rem solid #64a19d;
+    color: #fff;
   }
 }
 .projects-section .project-text {
@@ -11654,14 +11724,16 @@ body {
 }
 .contact-section .card h4, .contact-section .card .h4 {
   font-size: 0.8rem;
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Raleway";
   text-transform: uppercase;
   letter-spacing: 0.15rem;
+  color: black;
 }
 .contact-section .card hr {
   border-color: #64a19d;
   border-width: 0.25rem;
   width: 3rem;
+  color: black;
 }
 .contact-section .social {
   margin-top: 5rem;
@@ -11670,10 +11742,10 @@ body {
   text-align: center;
   height: 3rem;
   width: 3rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: #a72f2f;
   border-radius: 100%;
   line-height: 3rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: black;
 }
 .contact-section .social a:hover {
   color: rgba(255, 255, 255, 0.5);
@@ -11684,4 +11756,5 @@ body {
 
 .footer {
   padding: 5rem 0;
+  font-family: "Raleway";
 }
